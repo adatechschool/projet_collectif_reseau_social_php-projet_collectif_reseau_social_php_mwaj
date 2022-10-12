@@ -25,11 +25,11 @@ INSERT INTO `critiques` (`author`, `content`, `rating`, `imdbId`) VALUES
 
 
 
-DROP TABLE IF EXISTS `signup`;
+DROP TABLE IF EXISTS `login`;
 
-CREATE TABLE `signup`(
+CREATE TABLE `login`(
     `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(50) NOT NULL,
+    `login` VARCHAR(50) NOT NULL,
     `password` VARCHAR(255) NOT NULL,
     `email` VARCHAR(50) NOT NULL,
     PRIMARY KEY(`id`)
