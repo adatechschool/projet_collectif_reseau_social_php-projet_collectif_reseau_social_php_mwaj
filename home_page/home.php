@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,6 +16,7 @@
   <link href="https://visiwig.com/patterns">
 </head>
 
+<<<<<<< HEAD
 <body>
   <header>
     <div id="navlist">
@@ -27,6 +32,29 @@
 
       <p><a href="../login/login.php">Sign up</a></p>
 
+=======
+  <body>
+    <header>
+        <div id="navlist">
+            <a class= "logoCinema" href="home.php"><img src="../images/logo_cinema.png"></a>
+            <div class="flexbox">
+                <div class="search">
+                    <div>
+                        <input type="text" id="searchbar" placeholder="Search . . ." required>
+                    </div>
+                    <!-- <button type="submit" class="searchbutton" id="search">search</button> -->
+                </div>
+            </div>
+
+      <?php 
+    if(!$_SESSION["name"]) {
+      ?>
+      <p><a href="../login/login.php">Sign up</a></p>
+      <?php
+      }
+    ?>
+      
+>>>>>>> main
   </header>
   <div class="container">
     <div class="carousel">
@@ -135,6 +163,17 @@
   <footer>
     <p>Copyright &copy; 2022 */*\* _A_J_M_W_</p>
     <a href="contact.html">Contact</a>
+<<<<<<< HEAD
+=======
+    <?php 
+    if($_SESSION["name"]) {
+      ?>
+      Welcome <?php echo $_SESSION["name"]; ?> <a href="../login/logout.php" tite="Logout">Logout.
+      <?php
+      }
+    ?>
+ 
+>>>>>>> main
   </footer>
 
 
@@ -142,4 +181,8 @@
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> main
